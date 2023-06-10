@@ -3,7 +3,7 @@ namespace Develop03
     class Reference
     {
 
-        string _reference;
+        private string _reference;
 
         public Reference(string myReference) 
         {
