@@ -7,10 +7,12 @@ namespace Develop03
         {
             Random rnd = new Random();
             Scripture scripture = new Scripture("John 3:16", "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
+           
             bool active = true;
             
             Console.Clear();
             scripture.DisplayScripture();
+            Console.WriteLine("Please enter to continue, type 'quit' to finish or type 'help' to reveal a hidden word:");
 
             while (active)
             {
@@ -33,7 +35,7 @@ namespace Develop03
                 }
                 Console.Clear();
                 scripture.DisplayScripture();
-
+                Console.WriteLine("Please enter to continue, type 'quit' to finish or type 'help' to reveal a hidden word:");
 
             }
         }
