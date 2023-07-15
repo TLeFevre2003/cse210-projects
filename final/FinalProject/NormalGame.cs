@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Tennis;
 
 class NormalGame : Game
@@ -6,13 +7,8 @@ class NormalGame : Game
     string _scoreTwo;
     public NormalGame() : base()
     {
-
         _winScore = 4;
- 
-
-
     }
-
     public override string GetScore()
     {
         Dictionary<int, string> tennisScores = new Dictionary<int, string>()
@@ -23,13 +19,10 @@ class NormalGame : Game
             { 3, "40"},
             { 4, "adv"}
         };
-
-
         if (_playerOneScore<4 || _playerTwoScore<4)
         {
             _scoreOne = tennisScores[_playerOneScore];
             _scoreTwo = tennisScores[_playerTwoScore]; 
-   
         }
         else
         {
@@ -50,8 +43,6 @@ class NormalGame : Game
             }
         }
         return $"{_scoreOne},{_scoreTwo}";
-
-
     }
     public override bool CheckScore()
     {
@@ -65,7 +56,4 @@ class NormalGame : Game
         }
         return false;
     }
-
-
-
 }

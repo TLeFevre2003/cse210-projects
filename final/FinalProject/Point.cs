@@ -2,7 +2,6 @@ namespace Tennis;
 
 class Point
 {
-
     private string _playerOne;
     private string _playerTwo;
 

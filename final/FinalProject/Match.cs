@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 namespace Tennis;
 
 abstract class Match
@@ -47,7 +48,6 @@ abstract class Match
         }
         return false;
     }
-
     public  string GetScore()
     {
         string score = _sets[_sets.Count - 1].GetScore();
@@ -58,6 +58,4 @@ abstract class Match
     {
         return _matchWinner;
     }
-
-
 }

@@ -15,8 +15,6 @@ class NormalSet : Set
     public override void AddGame()
     {
         _games.Add(new NormalGame());
-
-
     }
     public override void UpdateGame(string winner,string playerOne,string playerTwo)
     {
@@ -36,13 +34,9 @@ class NormalSet : Set
     }
     public override string GetScore()
     {
-
         string score = _games[_games.Count - 1].GetScore();
         score += $",{_p1Score},{_p2Score}";
         return score;
-
-
-
     }
     public override int CheckScore()
     {
@@ -61,7 +55,6 @@ class NormalSet : Set
                 _games.Add(new TieBreak());
                 _isTie = true;
             }
-            
             return 0;
         }
         return 0;

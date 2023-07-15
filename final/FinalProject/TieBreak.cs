@@ -5,19 +5,12 @@ class TieBreak : Game
 
    public TieBreak() : base()
     {
-
         _winScore = 7;
-
-
-
     }
-
-
     public override string GetScore()
     {
         return $"{_playerOneScore}-{_playerTwoScore}";
     }
-
     public override bool CheckScore()
     {
         if (_playerOneScore >= 7 & (_playerOneScore-_playerTwoScore)>=2)
