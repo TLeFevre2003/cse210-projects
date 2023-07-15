@@ -5,7 +5,6 @@ class NormalSet : Set
     private bool _isTie;
     private int _p1Score;
     private int _p2Score;
-    private int _currentGame;
     public NormalSet()
     {
         _p1Score = 0;
@@ -21,9 +20,8 @@ class NormalSet : Set
     }
     public override void UpdateGame(string winner,string playerOne,string playerTwo)
     {
-        _currentGame = _games.Count - 1;
-        _games[_currentGame].AddPoint(playerOne, playerTwo, winner);
-        if (_games[_currentGame].CheckScore())
+        _games[_games.Count - 1].AddPoint(playerOne, playerTwo, winner);
+        if (_games[_games.Count - 1].CheckScore())
         {
             AddGame();
             if (winner == playerOne)
@@ -34,13 +32,12 @@ class NormalSet : Set
             {
                 _p2Score++;
             }
-            _currentGame = _games.Count - 1;
         }
     }
     public override string GetScore()
     {
 
-        string score = _games[_currentGame].GetScore();
+        string score = _games[_games.Count - 1].GetScore();
         score += $",{_p1Score},{_p2Score}";
         return score;
 

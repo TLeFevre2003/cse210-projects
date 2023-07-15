@@ -4,34 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        string playerOne = "tyler";
-        string playerTwo = "james";
-        BestOfThree match = new BestOfThree(playerOne,playerTwo);
-
-        bool playing = true;
-        string answer;
-        while (playing)
+        InputOutput IO = new InputOutput();
+        IO.NamePlayers();
+        IO.CreateMatch();
+        bool running = false;
+        while (running == false)
         {
-            Console.Clear();
-            Console.WriteLine(match.GetScore());
-            Console.WriteLine("Press 1 for player 1, 2 for player 2, 3 to quit");
+            IO.DisplayScore();
+            running = IO.EnterScore();
 
-            answer = Console.ReadLine();
 
-            if (answer == "1")
-            {
-                match.UpdateSet(playerOne);
-            }
-            else if (answer == "2")
-            {
-                match.UpdateSet(playerTwo);
-            }
-            else if (answer == "3")
-            {
-                playing = false;
-            }
 
 
         }
+        IO.DisplayWinner();
+        
     }
 }
