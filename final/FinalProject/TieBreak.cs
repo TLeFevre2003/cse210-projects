@@ -5,7 +5,7 @@ class TieBreak : Game
 
    public TieBreak() : base()
     {
-        _winScore = 7;
+
     }
     public override string GetScore()
     {

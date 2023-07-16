@@ -3,11 +3,11 @@ namespace Tennis;
 
 class NormalGame : Game
 {
-    string _scoreOne;
-    string _scoreTwo;
+    private string _scoreOne;
+    private string _scoreTwo;
     public NormalGame() : base()
     {
-        _winScore = 4;
+
     }
     public override string GetScore()
     {

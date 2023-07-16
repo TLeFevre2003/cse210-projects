@@ -17,7 +17,7 @@ abstract class Match
     {
         _totalSets = sets;
         _minSets = min;
-        _winner = "0";
+        _matchWinner = "0";
     }
     public void AddSet()
     {
